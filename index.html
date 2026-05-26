@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenGSG</title>
+  <title>OpenGSS</title>
 
   <style>
     body {
@@ -14,14 +14,14 @@
     }
 
     .banner {
-      padding: 70px 20px 50px;
+      padding: 70px 20px 55px;
       text-align: center;
       background: linear-gradient(135deg, #f5f7fa, #e8eef7);
       border-bottom: 1px solid #ddd;
     }
 
     .banner h1 {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto 20px;
       font-size: 42px;
       line-height: 1.25;
@@ -32,19 +32,6 @@
       font-size: 20px;
       color: #444;
       margin-top: 15px;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      font-size: 18px;
-    }
-
-    .content h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
     }
 
     .buttons {
@@ -65,12 +52,49 @@
     .button:hover {
       background: #444;
     }
+
+    .content {
+      max-width: 1050px;
+      margin: 50px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 50px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    .figure {
+      margin: 35px auto;
+      text-align: center;
+    }
+
+    .figure img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .caption {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+    }
   </style>
 </head>
 
 <body>
   <section class="banner">
-    <h1>OpenGSG: Open-World Relational Reasoning for 3D Gaussian Splatting Scene Understanding</h1>
+    <h1>OpenGSS: Open-World Relational Reasoning for 3D Gaussian Splatting Scene Understanding</h1>
 
     <div class="authors">
       Thanh-Danh Phan, Hyun-Do Jung, Ba-Tuan-Hoang Chu, Gon-Woo Kim
@@ -90,13 +114,36 @@
       3D Gaussian Splatting has recently emerged as a powerful scene representation,
       yet existing 3DGS-based scene understanding has predominantly addressed
       object-level perception, leaving inter-object reasoning comparatively underexplored.
+      Modeling such relationships through open-vocabulary 3D scene graphs is essential
+      for higher-level tasks such as navigation, manipulation, and language-grounded reasoning.
     </p>
 
     <p>
-      We propose OpenGSG, a unified framework for open-vocabulary 3D scene graph
-      generation that exploits 3D Gaussian Splatting as a generative intermediate
-      representation for both object nodes and relational edges.
+      We propose OpenGSS, a unified framework that exploits 3D Gaussian Splatting as a
+      generative intermediate representation for both object nodes and relational edges.
+      For nodes, graph-regularized clustering over supervoxels is refined to obtain
+      geometrically coherent instances aligned with multi-view vision-language captions.
+      For edges, relational reasoning is reformulated as geometry-aware viewpoint synthesis,
+      enabling zero-shot relationship inference from synthesized views.
     </p>
+
+    <h2>Pipeline Overview</h2>
+
+    <div class="figure">
+      <img src="images/Pipline_overall.png" alt="OpenGSS pipeline overview">
+      <div class="caption">
+        Overview of the OpenGSS pipeline for semantic object mapping and object-based scene graph construction.
+      </div>
+    </div>
+
+    <h2>Object Query Results</h2>
+
+    <div class="figure">
+      <img src="images/Query_objects_results_compress.jpg" alt="OpenGSS object query results">
+      <div class="caption">
+        Qualitative results of open-vocabulary object querying in 3D Gaussian scenes.
+      </div>
+    </div>
   </main>
 </body>
 </html>
