@@ -30,8 +30,14 @@
 
     .authors {
       font-size: 20px;
-      color: #444;
+      color: #333;
       margin-top: 15px;
+    }
+
+    .affiliation {
+      font-size: 18px;
+      color: #555;
+      margin-top: 10px;
     }
 
     .buttons {
@@ -89,6 +95,26 @@
       color: #555;
       line-height: 1.5;
     }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin: 35px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 </head>
 
@@ -100,10 +126,15 @@
       Thanh-Danh Phan, Hyun-Do Jung, Ba-Tuan-Hoang Chu, Gon-Woo Kim
     </div>
 
+    <div class="affiliation">
+      Chungbuk National University
+    </div>
+
     <div class="buttons">
       <a class="button" href="#">Paper</a>
       <a class="button" href="#">Code</a>
       <a class="button" href="#">Dataset</a>
+      <a class="button" href="#video">Video</a>
     </div>
   </section>
 
@@ -126,6 +157,17 @@
       For edges, relational reasoning is reformulated as geometry-aware viewpoint synthesis,
       enabling zero-shot relationship inference from synthesized views.
     </p>
+
+    <h2 id="video">Video</h2>
+
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="OpenGSS video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
 
     <h2>Pipeline Overview</h2>
 
