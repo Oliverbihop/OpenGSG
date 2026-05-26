@@ -1,9 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenGSG</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    .banner {
+      padding: 70px 20px 50px;
+      text-align: center;
+      background: linear-gradient(135deg, #f5f7fa, #e8eef7);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .banner h1 {
+      max-width: 1000px;
+      margin: 0 auto 20px;
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .authors {
+      font-size: 20px;
+      color: #444;
+      margin-top: 15px;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 22px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello from my project page</h1>
+  <section class="banner">
+    <h1>OpenGSG: Open-World Relational Reasoning for 3D Gaussian Splatting Scene Understanding</h1>
+
+    <div class="authors">
+      Thanh-Danh Phan, Hyun-Do Jung, Ba-Tuan-Hoang Chu, Gon-Woo Kim
+    </div>
+
+    <div class="buttons">
+      <a class="button" href="#">Paper</a>
+      <a class="button" href="#">Code</a>
+      <a class="button" href="#">Dataset</a>
+    </div>
+  </section>
+
+  <main class="content">
+    <h2>Abstract</h2>
+
+    <p>
+      3D Gaussian Splatting has recently emerged as a powerful scene representation,
+      yet existing 3DGS-based scene understanding has predominantly addressed
+      object-level perception, leaving inter-object reasoning comparatively underexplored.
+    </p>
+
+    <p>
+      We propose OpenGSG, a unified framework for open-vocabulary 3D scene graph
+      generation that exploits 3D Gaussian Splatting as a generative intermediate
+      representation for both object nodes and relational edges.
+    </p>
+  </main>
 </body>
 </html>
