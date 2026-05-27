@@ -171,22 +171,39 @@
 
    <h2 id="video">Video</h2>
 
-  <div class="video-banner">
-    <img src="images/BannerPaper.png" alt="OpenGSS video banner">
-  </div>
-  
-  <div class="video-container">
-    <iframe
-      width="1337"
-      height="752"
-      src="https://www.youtube.com/embed/19Ay2go7jEI"
-      title="Semantic Map Construction on Omnigibson Simulation"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div class="video-wrapper" onclick="loadVideo()">
+  <img
+    id="video-thumbnail"
+    src="images/BannerPaper.jpg"
+    alt="OpenGSS video thumbnail"
+  >
+
+  <div class="play-button">▶</div>
+
+  <iframe
+    id="youtube-video"
+    src=""
+    title="Semantic Map Construction on Omnigibson Simulation"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<script>
+  function loadVideo() {
+    const iframe = document.getElementById("youtube-video");
+    const thumbnail = document.getElementById("video-thumbnail");
+    const playButton = document.querySelector(".play-button");
+
+    iframe.src = "https://www.youtube.com/embed/19Ay2go7jEI?autoplay=1";
+
+    thumbnail.style.display = "none";
+    playButton.style.display = "none";
+    iframe.style.display = "block";
+  }
+</script>
 
     <h2>Pipeline Overview</h2>
 
