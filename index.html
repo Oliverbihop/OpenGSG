@@ -6,6 +6,7 @@
   <title>OpenGSG</title>
 
   <style>
+    
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -115,6 +116,17 @@
       height: 100%;
       border: 0;
     }
+    .video-banner {
+  margin: 35px auto 20px;
+  text-align: center;
+}
+
+.video-banner img {
+  width: 100%;
+  max-width: 1050px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
   </style>
 </head>
 
@@ -157,14 +169,24 @@
       enabling zero-shot relationship inference from synthesized views.
     </p>
 
-    <h2 id="video">Video</h2>
+   <h2 id="video">Video</h2>
 
-    <div class="video-container">
-      <iframe width="1337" height="752"
-        src="https://www.youtube.com/embed/19Ay2go7jEI" title="Semantic Map Construction on Omnigibson Simulation" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen></iframe>
-    </div>
+  <div class="video-banner">
+    <img src="images/BannerPaper.jpg" alt="OpenGSS video banner">
+  </div>
+  
+  <div class="video-container">
+    <iframe
+      width="1337"
+      height="752"
+      src="https://www.youtube.com/embed/19Ay2go7jEI"
+      title="Semantic Map Construction on Omnigibson Simulation"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
 
     <h2>Pipeline Overview</h2>
 
