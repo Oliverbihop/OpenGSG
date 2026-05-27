@@ -184,6 +184,46 @@
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
   background: #fff;
 }
+    <style>
+  .downstream-video-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 35px auto;
+  }
+
+  .downstream-video-card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .downstream-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    background: #000;
+  }
+
+  .downstream-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media (max-width: 800px) {
+    .downstream-video-row {
+      flex-direction: column;
+    }
+  }
+</style>
   </style>
 </head>
 
@@ -291,14 +331,44 @@
       </div>
     </div>
     
-    <h2>Downstream tasks</h2>
+    <h2>Downstream Tasks</h2>
 
-    <div class="figure">
-      <img src="images/Quadrupled.png" alt="OpenGSS object query results">
-      <div class="caption">
-        Qualitative results of open-vocabulary object querying in 3D Gaussian scenes.
-      </div>
+<div class="figure">
+  <img src="images/Quadrupled.png" alt="OpenGSS downstream task results">
+  <div class="caption">
+    Qualitative examples of downstream reasoning tasks using the constructed 3D scene graph.
+  </div>
+</div>
+
+<div class="downstream-video-row">
+  <div class="downstream-video-card">
+    <div class="downstream-video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/19Ay2go7jEI"
+        title="Downstream task video 1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
+    <div class="caption">
+      Example downstream task demonstration.
+    </div>
+  </div>
+
+  <div class="downstream-video-card">
+    <div class="downstream-video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/19Ay2go7jEI"
+        title="Downstream task video 2"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="caption">
+      Another downstream task demonstration.
+    </div>
+  </div>
+</div>
   </main>
 </body>
 </html>
