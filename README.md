@@ -1,3 +1,3 @@
-# OpenGSS
+# OpenGSG
 
 https://oliverbihop.github.io/OpenGSG/
