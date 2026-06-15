@@ -269,9 +269,21 @@
     font-size: 14px;
     color: #555;
   }
+  .reason-row {
+    align-items: center;          /* vertically center the two columns */
+  }
+  
+  .reason-row .task-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;          /* center the heading + image */
+  }
+  
   .reason-row .task-item img {
-  height: 300px;          /* equal height → tops & bottoms align */
-  object-fit: contain;
+    height: 320px;
+    width: auto;                  /* <-- key change: no longer 100% */
+    max-width: 100%;              /* safety so a wide image can't overflow */
+    object-fit: contain;
   }
 
   @media (max-width: 900px) {
